@@ -17,17 +17,6 @@ function App() {
           <p>Pagina default de React.js</p>
         </div>
         <Routing />
-        {/*<Saludos />*/}
-        {/*<Saludo1 color="green" bgColor="yellow" text="saludo1 modificado"/>*/
-}        {/*<Saludo2 />*/}
-
-        {/*<Envoltura styles={{backgroundColor: 'lightblue'}}>*/}
-          {/*<Saludo1 />*/}
-          {/*<Saludo2 />*/}
-        {/*</Envoltura>*/}
-
-        {/*<Libreria />*/}
-        {/*<Libreria />*/}
       </main>
     </div>
   );

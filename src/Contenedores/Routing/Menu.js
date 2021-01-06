@@ -19,7 +19,11 @@ function Menu() {
                 </li>
                 <li>
                     <Link to="/apiffull">API Fetching Full</Link>
+                </li>          
+                <li>
+                    <Link to="/rquery">React Query</Link>
                 </li>                
+
                 <li>
                     <Link to="/cf">Contentful</Link>
                 </li>                

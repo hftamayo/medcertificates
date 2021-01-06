@@ -30,7 +30,7 @@ function Routing() {
                         <APIFetchingFull />
                     </Route>           
                     <Route path="/rquery">
-                        <Contentful />
+                        <ReactQueryExample />
                     </Route>                                     
                     <Route path="/cf">
                         <Contentful />
