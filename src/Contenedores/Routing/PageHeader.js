@@ -7,13 +7,18 @@ import { setNewTheme } from '../../redux/actions';
 import { themes } from '../../utils';
 
 const links = [
-  { label: 'Example', to: '/', icon: <Reactjs color="accent-2" /> },
+  {/* label: 'Example', to: '/', icon: <Reactjs color="accent-2" /> },
   { label: 'JSX', to: '/jsx', icon: <Reactjs color="accent-2" /> },
   { label: 'Lifecycle', to: '/lifecycle', icon: <Reactjs color="accent-2" /> },
   { label: 'Users', to: '/users', icon: <Group color="accent-2" /> },
   { label: 'Fetch Data', to: '/api', icon: <DocumentStore color="accent-2" /> },
   { label: 'Redux Toolkit', to: '/toolkit', icon: <Tools color="accent-2" /> },
-  { label: 'React Query', to: '/rquery', icon: <GraphQl color="accent-2" /> },
+  { label: 'React Query', to: '/rquery', icon: <GraphQl color="accent-2" /> },*/
+
+   label: 'Employees', to: '/users', icon: <Group color="accent-2" /> },
+  { label: 'Medical Certificates', to: '/api', icon: <DocumentStore color="accent-2" /> },
+  { label: 'Logout', to: '/toolkit', icon: <Tools color="accent-2" /> },
+  { label: 'Prueba', to: '/apiffull', icon: <Reactjs color="accent-2" /> },
 ];
 
 

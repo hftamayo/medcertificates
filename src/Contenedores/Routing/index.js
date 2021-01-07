@@ -10,35 +10,29 @@ import Menu from './Menu';
 
 function Routing() {
     return (
-        <div>
-            <HashRouter>
-                <Menu />
-                <Switch>
-                    <Route exact path="/">
-                        <Saludo1 text="saludos desde menu y routing"/>
-                    </Route>
-                    <Route path="/jsx">
-                        <Saludo3 />
-                    </Route>
-                    <Route path="/buscarusus">
-                        <Busquedausuarios />
-                    </Route>   
-                    <Route path="/api">
-                        <APIFetching />
-                    </Route>                 
-                    <Route path="/apiffull">
-                        <APIFetchingFull />
-                    </Route>           
-                    <Route path="/rquery">
-                        <ReactQueryExample />
-                    </Route>                                     
-                    <Route path="/cf">
-                        <Contentful />
-                    </Route>                 
-
-                </Switch>
-            </HashRouter>
-        </div>
+        <Switch>
+            <Route exact path="/">
+                {/*<Saludo1 text="saludos desde menu y routing"/>*/}
+            </Route>
+            <Route path="/jsx">
+                <Saludo3 />
+            </Route>
+            <Route path="/buscarusus">
+                <Busquedausuarios />
+            </Route>   
+            <Route path="/api">
+                <APIFetching />
+            </Route>                 
+            <Route path="/apiffull">
+                <APIFetchingFull />
+            </Route>           
+            <Route path="/rquery">
+                <ReactQueryExample />
+            </Route>                                     
+            <Route path="/cf">
+                <Contentful />
+            </Route>                 
+        </Switch>
     );
 }
 

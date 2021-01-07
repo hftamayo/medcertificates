@@ -4,22 +4,26 @@ import Saludos, { Envoltura, Saludo1, Saludo2 } from './Contenedores/Ejemplojsx'
 import Libreria from './Contenedores/Ejemplojsx/Libreria';
 import Menu from './Contenedores/Routing/Menu';
 import Routing from './Contenedores/Routing';
+import { Box, Grommet } from 'grommet';
+import PageHeader from './Contenedores/Routing/PageHeader';
+import { HashRouter } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { themes } from './utils';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+  const selectedTheme = useSelector((state) => state.main.theme);
 
-      <main>
-        <div>
-          <p>Pagina default de React.js</p>
-        </div>
-        <Routing />
-      </main>
-    </div>
+  return (
+    <Grommet theme={themes[selectedTheme]}>
+      <HashRouter>
+        <PageHeader />
+        <Box pad="medium">
+          <Routing />
+        </Box>
+      </HashRouter>
+    </Grommet>
   );
 }
+
 
 export default App;
