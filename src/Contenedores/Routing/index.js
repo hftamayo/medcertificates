@@ -3,7 +3,7 @@ import { HashRouter, Route, Switch } from "react-router-dom";
 import APIFetching from '../APIFetching';
 import APIFetchingFull from '../APIFetchingFull';
 import ReactQueryExample from '../ReactQueryExample';
-import Medcerts from '../Medcerts';
+import Workers from '../Workers';
 import Contentful from '../Contentful';
 import Saludo3, { Saludo1 } from '../Ejemplojsx';
 import Busquedausuarios from '../Optusuarios';
@@ -27,8 +27,8 @@ function Routing() {
             <Route path="/apiffull">
                 <APIFetchingFull />
             </Route>    
-            <Route path="/employees">
-                <Medcerts />
+            <Route path="/workers">
+                <Workers />
             </Route>                
             <Route path="/rquery">
                 <ReactQueryExample />

@@ -15,7 +15,7 @@ const links = [
   { label: 'Redux Toolkit', to: '/toolkit', icon: <Tools color="accent-2" /> },
   { label: 'React Query', to: '/rquery', icon: <GraphQl color="accent-2" /> },*/
 
-   label: 'Employees', to: '/employees', icon: <Group color="accent-2" /> },
+   label: 'Workers', to: '/workers', icon: <Group color="accent-2" /> },
   { label: 'Medical Certificates', to: '/medcertificates', icon: <DocumentStore color="accent-2" /> },
   { label: 'Logout', to: '/toolkit', icon: <Tools color="accent-2" /> },
   { label: 'Prueba', to: '/apiffull', icon: <Reactjs color="accent-2" /> },

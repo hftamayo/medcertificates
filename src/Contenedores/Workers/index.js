@@ -4,7 +4,7 @@ import MoviesProvider from './Context';
 import Form from './Form';
 import List from './List';
 
-function Medcerts() {
+function Workers() {
   return (
     <MoviesProvider>
       <Box direction="row" pad="medium" gap="medium">
@@ -15,4 +15,4 @@ function Medcerts() {
   );
 }
 
-export default Medcerts;
+export default Workers;

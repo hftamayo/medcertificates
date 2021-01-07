@@ -15,6 +15,8 @@ function Form() {
   const queryClient = useQueryClient();
 
   const mutation = useMutation(
+
+    /*
     function ({ data, id }) {
       if (!id) {
         return createEntry(data);
@@ -22,6 +24,17 @@ function Form() {
         return updateEntry(id, data);
       }
     },
+    */
+   function ({ data, idEmployee }) {
+    if (!idEmployee) {
+      console.log("creacion de registro");
+      return createEntry(data);
+    } else {
+      console.log("actualizacion de registro con el sys id: "+idEmployee);
+      return updateEntry(idEmployee, data);
+    }
+  },
+
     {
       onSuccess: function () {
         log('success', 'Action performed successfully');
@@ -51,8 +64,9 @@ function Form() {
     };
     delete payload.createdAt;
     delete payload.updatedAt;
-    //delete payload.poster;
-    //delete payload.cast;
+    //ancla: estos valores debo modificarlos para la funcion oneToMany
+    delete payload.poster;
+    delete payload.cast;
     delete payload.id;
 
     console.log({ values, payload });
@@ -60,7 +74,8 @@ function Form() {
     if (isAddMode) {
       mutation.mutate({ data: payload });
     } else {
-      mutation.mutate({ data: payload, id: current.id });
+      //mutation.mutate({ data: payload, id: current.id });
+      mutation.mutate({ data: payload, idEmployee: current.id});
     }
   };
 
