@@ -3,7 +3,7 @@ import { Box, Button, DataTable, Text } from 'grommet';
 import { Actions, FormClose, FormEdit } from 'grommet-icons';
 import { DateTime } from 'luxon';
 
-function Table({ movies, setCurrent, deleteMovie }) {
+function Table({ workers, setCurrent, deleteWorker }) {
   return (
     <DataTable
     columns={[
@@ -15,7 +15,7 @@ function Table({ movies, setCurrent, deleteMovie }) {
         property: 'hireDateEmployee',
         header: <Text>Hire Date</Text>,
         render: (row) => {
-          return DateTime.fromISO(row.releaseDate).toLocaleString(
+          return DateTime.fromISO(row.hireDateEmployee).toLocaleString(
             DateTime.DATE_FULL
           );
         },
@@ -34,7 +34,7 @@ function Table({ movies, setCurrent, deleteMovie }) {
               />
               <Button
                 type="button"
-                onClick={() => deleteMovie(row.id)}
+                onClick={() => deleteWorker(row.id)}
                 icon={<FormClose color="accent-2" />}
                 plain
               />
@@ -43,7 +43,7 @@ function Table({ movies, setCurrent, deleteMovie }) {
         },
       },
     ]}
-    data={movies}
+    data={workers}
     />
   );
 }

@@ -14,7 +14,7 @@ function List() {
   } = useContext(WorkersContext);
 
   const { data, isFetching, error, isLoading } = useQuery(
-    'fetchMovies',
+    'fetchWorkers',
     function () {
       return getEntries();
     }
@@ -29,7 +29,7 @@ function List() {
     {
       onSuccess: function () {
         log('info', 'Action performed successfully');
-        queryClient.invalidateQueries('fetchMovies');
+        queryClient.invalidateQueries('fetchWorkers');
       },
       onError: function (err) {
         console.error(err);
@@ -38,12 +38,12 @@ function List() {
     }
   );
 
-  const deleteMovie = (id) => {
+  const deleteWorker = (id) => {
     deleteMutation.mutate(id);
   };
 
-  const setCurrentMovie = (movie) => {
-    setCurrent(movie);
+  const setCurrentWorker = (worker) => {
+    setCurrent(worker);
   };
 
   if (isLoading) {
@@ -87,9 +87,9 @@ function List() {
       </Box>
 
       <Table
-        movies={data}
-        setCurrent={setCurrentMovie}
-        deleteMovie={deleteMovie}
+        workers={data}
+        setCurrent={setCurrentWorker}
+        deleteWorker={deleteWorker}
       />
     </Box>
   );

@@ -16,21 +16,10 @@ function Form() {
 
   const mutation = useMutation(
 
-    /*
-    function ({ data, id }) {
-      if (!id) {
-        return createEntry(data);
-      } else {
-        return updateEntry(id, data);
-      }
-    },
-    */
    function ({ data, idEmployee }) {
     if (!idEmployee) {
-      console.log("creacion de registro");
       return createEntry(data);
     } else {
-      console.log("actualizacion de registro con el sys id: "+idEmployee);
       return updateEntry(idEmployee, data);
     }
   },
@@ -38,7 +27,7 @@ function Form() {
     {
       onSuccess: function () {
         log('success', 'Action performed successfully');
-        queryClient.invalidateQueries('fetchMovies');
+        queryClient.invalidateQueries('fetchWorkers');
       },
       onError: function (err) {
         console.error(err);
@@ -53,12 +42,7 @@ function Form() {
     console.log('values submitted', values);
 
     const payload = {
-      /*
-      ...values,
-      budget: parseInt(values.budget, 10),
-      boxOffice: parseInt(values.boxOffice, 10),
-      runningTime: parseInt(values.runningTime, 10),
-      */
+      //casting de objetos text que en el backend son int
      ...values,
      idEmployee: parseInt(values.idEmployee, 10),
     };
@@ -74,7 +58,6 @@ function Form() {
     if (isAddMode) {
       mutation.mutate({ data: payload });
     } else {
-      //mutation.mutate({ data: payload, id: current.id });
       mutation.mutate({ data: payload, idEmployee: current.id});
     }
   };
@@ -84,7 +67,7 @@ function Form() {
       {mutation.isSuccess && (
         <Box direction="row" gap="medium">
           <Text color="brand">
-            User created successfully... <StatusGood color="brand" />
+            Worker created successfully... <StatusGood color="brand" />
           </Text>
         </Box>
       )}
