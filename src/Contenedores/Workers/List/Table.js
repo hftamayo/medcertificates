@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button, DataTable, Text } from 'grommet';
-import { Actions, FormClose, FormEdit } from 'grommet-icons';
+import { Actions, FormClose, FormEdit, Aid } from 'grommet-icons';
 import { DateTime } from 'luxon';
 
 function Table({ workers, setCurrent, deleteWorker }) {
