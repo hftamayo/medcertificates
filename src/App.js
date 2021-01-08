@@ -1,8 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import Saludos, { Envoltura, Saludo1, Saludo2 } from './Contenedores/Ejemplojsx';
-import Libreria from './Contenedores/Ejemplojsx/Libreria';
-import Menu from './Contenedores/Routing/Menu';
 import Routing from './Contenedores/Routing';
 import { Box, Grommet } from 'grommet';
 import PageHeader from './Contenedores/Routing/PageHeader';
