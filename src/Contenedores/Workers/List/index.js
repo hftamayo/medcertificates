@@ -3,7 +3,7 @@ import { AddCircle, Refresh, StatusCritical } from 'grommet-icons';
 import React, { useContext } from 'react';
 import { useMutation, useQuery, useQueryClient } from 'react-query';
 import { log } from '../../../utils';
-import { MoviesContext } from '../Context';
+import { WorkersContext } from '../Context';
 import { getEntries } from '../sdk/deliveryAPI';
 import { deleteEntry } from '../sdk/managementAPI';
 import Table from './Table';
@@ -11,7 +11,7 @@ import Table from './Table';
 function List() {
   const {
     current: [, setCurrent],
-  } = useContext(MoviesContext);
+  } = useContext(WorkersContext);
 
   const { data, isFetching, error, isLoading } = useQuery(
     'fetchMovies',

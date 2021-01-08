@@ -3,14 +3,14 @@ import { StatusCritical, StatusGood } from 'grommet-icons';
 import React, { useContext } from 'react';
 import { useMutation, useQueryClient } from 'react-query';
 import { log } from '../../../utils';
-import { MoviesContext } from '../Context';
+import { WorkersContext } from '../Context';
 import { createEntry, updateEntry } from '../sdk/managementAPI';
 import FormLayout from './FormLayout';
 
 function Form() {
   const {
     current: [current],
-  } = useContext(MoviesContext);
+  } = useContext(WorkersContext);
 
   const queryClient = useQueryClient();
 

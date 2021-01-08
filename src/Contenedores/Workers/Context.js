@@ -1,21 +1,21 @@
 import React, { createContext, useState } from 'react';
 
-export const MoviesContext = createContext();
+export const WorkersContext = createContext();
 
-function MoviesProvider(props) {
+function WorkersProvider(props) {
   // const [movies, setMovies] = useState([]);
   const [current, setCurrent] = useState({});
 
   return (
-    <MoviesContext.Provider
+    <WorkersContext.Provider
       value={{
         // movies: [movies, setMovies],
         current: [current, setCurrent],
       }}
     >
       {props.children}
-    </MoviesContext.Provider>
+    </WorkersContext.Provider>
   );
 }
 
-export default MoviesProvider;
+export default WorkersProvider;
