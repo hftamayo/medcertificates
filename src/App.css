@@ -88,3 +88,25 @@ input, button, submit, select{
   font-size: 16px;
   border-radius: 8px;
 }
+
+/*Inicio Clases de "Home"*/
+.mainBody{
+  background-color: #2767de;
+  min-height: 26rem;
+}
+/*Fin Clases de "Home"*/
+
+/*Inicio Clases para los botones de Inicio/Cierre de sesion*/
+.logButton{
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+    width: 80px;
+    cursor: pointer;
+  }
+
+.logoutButton{
+  flex-wrap: nowrap;
+  float: left;
+  text-align:center;
+}
+/*Fin Clases para los botones de Inicio/Cierre de sesion*/
