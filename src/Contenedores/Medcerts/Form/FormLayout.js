@@ -21,6 +21,7 @@ function FormLayout({ onSubmit, currentValues }) {
       }}
       onReset={() => setValue(defaultValues)}
       onSubmit={(event) => {
+        event.value.idEmployee = idEmp;
         console.log('Submit', event.value, event.touched);
         onSubmit(event.value);
       }}
