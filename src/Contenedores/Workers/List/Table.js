@@ -1,9 +1,11 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { Box, Button, DataTable, Text } from 'grommet';
 import { Actions, FormClose, FormEdit, Aid } from 'grommet-icons';
 import { DateTime } from 'luxon';
 
 function Table({ workers, setCurrent, deleteWorker }) {
+  const addMedcert = useHistory();
   return (
     <DataTable
     columns={[
@@ -40,7 +42,10 @@ function Table({ workers, setCurrent, deleteWorker }) {
               />
               <Button
                 type="button"
-                //onClick={() => addCertificate(row.id)}
+                onClick={() => 
+                  //console.log(row.id + " -> " + row.fullNameEmployee)
+                  addMedcert.push(`/medcerts/${row.id}`)
+                }
                 icon={<Aid color="accent-2" />}
                 plain
               />              

@@ -8,7 +8,7 @@ import { themes } from '../../utils';
 
 const links = [
   {label: 'Workers', to: '/workers', icon: <Group color="accent-2" /> },
-  { label: 'Medical Certificates', to: '/medcerts', icon: <DocumentStore color="accent-2" /> },
+  { label: 'Medical Certificates', to: '/vermedcerts', icon: <DocumentStore color="accent-2" /> },
   { label: 'Logout', to: '/toolkit', icon: <Tools color="accent-2" /> },
 ];
 

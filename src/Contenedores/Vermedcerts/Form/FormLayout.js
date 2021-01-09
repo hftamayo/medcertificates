@@ -1,16 +1,13 @@
 import { Box, Button, DateInput, Form, FormField, TextInput } from 'grommet';
 import { Clock, Money } from 'grommet-icons';
 import React from 'react';
-import { useParams } from 'react-router-dom';
 
 function FormLayout({ onSubmit, currentValues }) {
   const defaultValues = {
     ...currentValues,
   };
-  const [value, setValue] = React.useState(defaultValues);
 
-  const { idEmp }  =  useParams();
-  console.log("idEmp: " + idEmp);
+  const [value, setValue] = React.useState(defaultValues);
 
   return (
     <Form
@@ -25,15 +22,6 @@ function FormLayout({ onSubmit, currentValues }) {
         onSubmit(event.value);
       }}
     >
-      <FormField label="Employee ID" name="idEmployee">
-        <TextInput name="idEmployee" value="por hacer" readOnly />
-      </FormField>
-
-      <FormField label="Employee's Name ">
-        <TextInput value="por hacer" readOnly/>
-      </FormField>
-
-
       <FormField label="Internal ID" name="idMedCert">
         <TextInput name="idMedCert" />
       </FormField>

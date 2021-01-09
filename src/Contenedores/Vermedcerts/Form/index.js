@@ -6,10 +6,8 @@ import { log } from '../../../utils';
 import { MedcertsContext } from '../Context';
 import { createEntry, updateEntry } from '../sdk/managementAPI';
 import FormLayout from './FormLayout';
-import { useHistory } from 'react-router-dom';
 
 function Form() {
-  const viewMedcert = useHistory();
   const {
     current: [current],
   } = useContext(MedcertsContext);
@@ -30,7 +28,6 @@ function Form() {
       onSuccess: function () {
         log('success', 'Action performed successfully');
         queryClient.invalidateQueries('fetchMedcerts');
-        viewMedcert.push(`/vermedcerts/`);
       },
       onError: function (err) {
         console.error(err);
