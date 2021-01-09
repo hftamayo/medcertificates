@@ -44,7 +44,7 @@ function Table({ workers, setCurrent, deleteWorker }) {
                 type="button"
                 onClick={() => 
                   //console.log(row.id + " -> " + row.fullNameEmployee)
-                  addMedcert.push(`/medcerts/${row.id}`)
+                  addMedcert.push(`/medcerts/${row.id}/${row.fullNameEmployee}`)
                 }
                 icon={<Aid color="accent-2" />}
                 plain

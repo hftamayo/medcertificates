@@ -9,7 +9,7 @@ function FormLayout({ onSubmit, currentValues }) {
   };
   const [value, setValue] = React.useState(defaultValues);
 
-  const { idEmp }  =  useParams();
+  const { idEmp, fnEmp }  =  useParams();
   //console.log("idEmp: " + idEmp);
 
   return (
@@ -26,7 +26,8 @@ function FormLayout({ onSubmit, currentValues }) {
       }}
     >
       <div>
-        <p>Employee ID: <b><i>{ idEmp }</i></b>, Full name: { }</p>
+        <p>Employee ID: <b><i>{ idEmp }</i></b>
+        , Full name: <b><i>{ fnEmp }</i></b></p>
       </div>
 
       <FormField label="Internal ID" name="idMedCert">
