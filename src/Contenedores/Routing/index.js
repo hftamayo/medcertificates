@@ -1,6 +1,7 @@
 import React from 'react';
 import { HashRouter, Route, Switch } from "react-router-dom";
 import Workers from '../Workers';
+import Medcerts from '../Medcerts';
 import Menu from './Menu';
 
 function Routing() {
@@ -10,9 +11,9 @@ function Routing() {
             <Workers />
             </Route>
             
-            {/*<Route path="/workers">
-                <Workers />
-    </Route>*/}                
+            <Route path="/medcerts">
+                <Medcerts />
+            </Route>
         </Switch>
     );
 }

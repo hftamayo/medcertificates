@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button, DataTable, Text } from 'grommet';
-import { Actions, FormClose, FormEdit } from 'grommet-icons';
+import { Actions, FormClose, FormEdit, Aid } from 'grommet-icons';
 import { DateTime } from 'luxon';
 
 function Table({ workers, setCurrent, deleteWorker }) {
@@ -38,6 +38,12 @@ function Table({ workers, setCurrent, deleteWorker }) {
                 icon={<FormClose color="accent-2" />}
                 plain
               />
+              <Button
+                type="button"
+                //onClick={() => addCertificate(row.id)}
+                icon={<Aid color="accent-2" />}
+                plain
+              />              
             </Box>
           );
         },
