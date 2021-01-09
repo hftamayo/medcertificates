@@ -12,7 +12,7 @@ function Routing() {
             <Workers />
             </Route>
             
-            <Route path="/medcerts">
+            <Route path="/medcerts/:idEmp">
                 <Medcerts />
             </Route>
 
