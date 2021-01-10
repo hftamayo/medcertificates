@@ -1,6 +1,8 @@
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import Workers from '../Workers';
+import Medcerts from '../Medcerts';
+import Vermedcerts from '../Vermedcerts';
 import PrivateRoute from './PrivateRoute';
 import Profile from '../../Componentes/Profile';
 import Home from '../../Componentes/Home';
@@ -11,14 +13,17 @@ function Routing() {
             <Route exact path="/">
             <Home />
             </Route>
+            
             <PrivateRoute path="/workers">
-            <Workers />
+                <Workers />
             </PrivateRoute>
-            <PrivateRoute path="/medcertificates">
-                
+            
+            <PrivateRoute path="/medcerts/:idEmp/:fnEmp">
+                <Medcerts />
             </PrivateRoute>
-            <PrivateRoute path="/profile">
-            <Profile />
+            
+            <PrivateRoute path="/vermedcerts">
+                <Vermedcerts />
             </PrivateRoute>
         </Switch>
     );
