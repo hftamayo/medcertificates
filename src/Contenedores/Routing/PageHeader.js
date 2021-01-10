@@ -5,18 +5,39 @@ import { Link, useLocation } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setNewTheme } from '../../redux/actions';
 import { themes } from '../../utils';
+import { useAuth0 } from '@auth0/auth0-react';
+import LoginButton from '../../Componentes/LoginButton';
+import LogoutButton from '../../Componentes/LogoutButton';
 
-const links = [
+const publicLinks = [
+  { label: 'Home', to: '/', icon: <Reactjs color="accent-2" /> },
+];
+
+/* Contendra todos los links que necesitan que el usuario inicie sesion*/
+const privateLinks = [
   {label: 'Workers', to: '/workers', icon: <Group color="accent-2" /> },
   { label: 'Medical Certificates', to: '/vermedcerts', icon: <DocumentStore color="accent-2" /> },
-  { label: 'Logout', to: '/toolkit', icon: <Tools color="accent-2" /> },
+  { label: 'Profile', to: '/profile', icon: <DocumentStore color="accent-2" /> },
 ];
 
 
 function PageHeader(props) {
+  const {isAuthenticated, isLoading} = useAuth0()
+  
   const location = useLocation();
-  console.log({ location });
-  console.log('props con redux', props);
+  
+  /* Mientras la pagina este cargando, no recornada nada */
+  if(isLoading){
+    return null;
+  }
+
+
+  let links = [...publicLinks];//Agregamos los links publicos
+
+  if(isAuthenticated){//Solo si el usuario esta autenticado, agregamos los links privados
+    links = [...publicLinks, ...privateLinks];
+  }
+  
 
   return (
     <Header background="brand" pad="medium">
@@ -43,6 +64,12 @@ function PageHeader(props) {
           onChange={({ option }) => props.setNewTheme(option)}
         />
       </Box>
+      
+      <Box justify="end">
+        <LoginButton/>
+        <LogoutButton/>
+      </Box>
+      
     </Header>
   );
 }

@@ -3,22 +3,28 @@ import { HashRouter, Route, Switch } from "react-router-dom";
 import Workers from '../Workers';
 import Medcerts from '../Medcerts';
 import Vermedcerts from '../Vermedcerts';
+import PrivateRoute from './PrivateRoute';
+import Profile from '../../Componentes/Profile';
+import Home from '../../Componentes/Home';
 
 function Routing() {
     return (
         <Switch>
-            <Route exact path="/workers">
-            <Workers />
+            <Route exact path="/">
+            <Home />
             </Route>
             
-            <Route path="/medcerts/:idEmp/:fnEmp">
+            <PrivateRoute path="/workers">
+                <Workers />
+            </PrivateRoute>
+            
+            <PrivateRoute path="/medcerts/:idEmp/:fnEmp">
                 <Medcerts />
-            </Route>
-
-            <Route path="/vermedcerts">
+            </PrivateRoute>
+            
+            <PrivateRoute path="/vermedcerts">
                 <Vermedcerts />
-            </Route>
-
+            </PrivateRoute>
         </Switch>
     );
 }
