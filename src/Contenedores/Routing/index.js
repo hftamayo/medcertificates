@@ -1,18 +1,25 @@
 import React from 'react';
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Workers from '../Workers';
-import Menu from './Menu';
+import PrivateRoute from './PrivateRoute';
+import Profile from '../../Componentes/Profile';
+import Home from '../../Componentes/Home';
 
 function Routing() {
     return (
         <Switch>
-            <Route exact path="/workers">
-            <Workers />
+            <Route exact path="/">
+            <Home />
             </Route>
-            
-            {/*<Route path="/workers">
-                <Workers />
-    </Route>*/}                
+            <PrivateRoute path="/workers">
+            <Workers />
+            </PrivateRoute>
+            <PrivateRoute path="/medcertificates">
+                
+            </PrivateRoute>
+            <PrivateRoute path="/profile">
+            <Profile />
+            </PrivateRoute>
         </Switch>
     );
 }
