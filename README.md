@@ -1,6 +1,7 @@
 # Designing, developing and deploying of a web based Application for medical certificates management
 ### Focus React Js Boot Camp 2020
 ###### Developers: Carlos Cordero (carlencordero@gmail.com), Cesar Amaya Soriano(ceschom1010@hotmail.com), Herbert Fernández Tamayo (hftamayo@gmail.com)
+###### Group #1
 
 
 ### Table of Content
