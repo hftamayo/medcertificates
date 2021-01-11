@@ -22,6 +22,10 @@ The first version's CRUD have been developed by Herbert Fernández Tamayo, the s
 
 This README file is intentional written in english thinking in developers and users who don't speak our mother language, which is spanish, and because, Focus ITO's clients are english speakers and surely their workforce needs to have skills in this language.
 
+The project's link is: [Project's Main Link](https://medcertificates.netlify.app/#/)
+
+User's credentials: ejemplo@ejemplo.com and the password is Contrasenia1
+
 ### 2. Dependencies and Technical Details
 1. English version of the System:
     1. Dependencies: npx, react-router-dom, react-hook-form, typescript, redux, react-redux, @reduxjs/toolkit, react-query, grommet, contentful, contentful-management, @auth0/auth0-react, @reduxjs/toolkit, luxon, netlify-cli
@@ -40,7 +44,7 @@ This README file is intentional written in english thinking in developers and us
 ### 3. Screen Recording
 In the next video the user may have access how the project works as well and overwiew of the project's tree :
 
-[Project's Summary](https://youtu.be/DFAr6zs6nro)
+[Project's Overview](https://youtu.be/KLuP--zpmb4)
 
 
 ### 4. Technical Details:
