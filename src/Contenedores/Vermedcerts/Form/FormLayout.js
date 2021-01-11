@@ -1,5 +1,5 @@
 import { Box, Button, DateInput, Form, FormField, TextInput } from 'grommet';
-import { Clock, Money } from 'grommet-icons';
+/*import { Clock, Money } from 'grommet-icons';*/
 import React from 'react';
 
 function FormLayout({ onSubmit, currentValues }) {

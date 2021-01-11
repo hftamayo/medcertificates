@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Header, Nav, Select, Text } from 'grommet';
-import { DocumentStore, GraphQl, Group, Reactjs, Tools } from 'grommet-icons';
+/*import { DocumentStore, GraphQl, Group, Reactjs, Tools } from 'grommet-icons';*/
+import { DocumentStore, Group, Reactjs } from 'grommet-icons';
 import { Link, useLocation } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setNewTheme } from '../../redux/actions';
