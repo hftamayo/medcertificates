@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Designing, developing and deploying of a web based Application for medical certificates management
+### Focus React Js Boot Camp 2020
+###### Developers: Carlos Cordero (carlencordero@gmail.com), Cesar Amaya Soriano(ceschom1010@hotmail.com), Herbert Fernández Tamayo (hftamayo@gmail.com)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Table of Content
+1. Project's overview
+2. Dependencies
+3. Screen Recording
+4. Technical details
+    1. Planning and Designing phase
+    2. Developing phase
+    3. Deploying phase
+5. Future improvements
 
-In the project directory, you can run:
+### 1. Project's overview
+The project has been designed, developed and deployed to manage the process of register medical certificates of the workforce of any company, it has an interface to record employee's general information and a second one to add details of a medical certificate. Before use the system, every user needs to validate his/her credentials. 
 
-### `npm start`
+The workgroup of developers decided to develop two versions: the first one has an interface oriented to english speakers and the backend is using contentful; the second one has an interface for spanish speakers and the backend is using firebase, the main reason of manage version is based two compare two backend as well as to acquire additional skills to polish our profesional profile. Both version use Reactjs for FrontEnd.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The first version's CRUD have been developed by Herbert Fernández Tamayo, the second version's CRUD have been developed by Cesar Amaya Soriano; in both version Carlos Cordero was in charge of adding the authentication module and the deploy process.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This README file is intentional written in english thinking in developers and users who don't speak our mother language, which is spanish, and because, Focus ITO's clients are english speakers and surely their workforce needs to have skills in this language.
 
-### `npm test`
+### 2. Dependencies and Technical Details
+1. English version of the System:
+    1. Dependencies: npx, react-router-dom, react-hook-form, typescript, redux, react-redux, @reduxjs/toolkit, react-query, grommet, contentful, contentful-management, @auth0/auth0-react, @reduxjs/toolkit, luxon, netlify-cli
+    2. FrontEnd: ReactJS: redux, grommet, react-query
+    3. BackEnd: Contentful
+    4. Authentication: Auth0
+    5. Deploy: Netlify
+2. Spanish version of the System:
+    1. Dependencies: npx, react-router-dom, react-hook-form, typescript, redux, react-redux, @reduxjs/toolkit, react-query, grommet, contentful, contentful-management, @auth0/auth0-react, @reduxjs/toolkit, luxon, netlify-cli
+    2. FrontEnd: ReactJS: redux, grommet, react-query
+    3. BackEnd: Firebase
+    4. Authentication: Auth0
+    5. Deploy: Netlify
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### 3. Screen Recording
+In the next video the user may have access how the project works as well and overwiew of the project's tree :
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Project's Summary](https://youtu.be/DFAr6zs6nro)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 4. Technical Details:
 
-### `npm run eject`
+### 4.1 Planning and Designing
+The team decided to use trello to planning the project and SCRUM as the Agile methodology to execute it. During the execution of the planned sprints we used a slack channel to communicate at least once in a day or when we need to manage any questions or situations related to the source code
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![planning01.png](./img/planning01.png?raw=true "Trello SCRUM boards")
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![planning02.png](./img/planning02.png?raw=true "Slach channel timeline")
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 4.2 Developing
+The backend was developed using Contenful CMS, we used Visual Studio Code as the prefered IDE
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![developing01.png](./img/developing01.png?raw=true "Contentful models")
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 4.3 Deploying
+Contentful and Auth0 were part of the tools used during the process of deploying. To use the application the credentials are: ejemplo@ejemplo.com and Contrasenia1 as the password.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![deploying01.png](./img/deploying01.png?raw=true "Deploying process")
 
-### Code Splitting
+![deploying02.png](./img/deploying02.png?raw=true "Deploying process")
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 5. Project's future improvements
+1. Integrate both application's version in one single repository.
+2. Expand the functions related to medical certificates such as search for specifics entries, validate user's inputs between others.
+3. Run test units.
+4. Apply other DevOps good practices.
+5. Use NodeJS as the backend.
